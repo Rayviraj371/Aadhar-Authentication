@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Student_Dashboard</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a
+          class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+          href="#"
+          ></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Congratulations! You Successfully Signed in</a></li>
+                <li><a class="dropdown-item" href="#">You will be getting notifications from here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Roll No.: 19CSE044</a></li>
+                <li><a class="dropdown-item" href="#">Reg No.: 19133222</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Aadhar No.: 999941057058</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-dark"
+      tabindex="-1"
+      id="sidebar">
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3">
+                
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-house-fill"></i></span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-clock-fill"></i></span>
+                <span>Classes</span>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-collection-fill"></i></span>
+                <span>Resources</span>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-file-earmark-bar-graph-fill "></i></span>
+                <span>Tasks/Assignments</span>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-calendar-minus-fill"></i></span>
+                <span>Meeting/Class</span>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-chat-left-dots-fill"></i></span>
+                <span>Messages</span>
+              </a>
+            </li> -->
+            <!-- <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-people-fill"></i></span>
+                <span>Groups</span>
+              </a>
+            </li> -->
+          </ul> 
+               
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Dashboard</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3" id="intro">
+            <div class="card bg-primary text-white h-100">
+              <div class="card-body py-5">Hi, Shivshankar Choudhry. Welcome to your portal.<img src="images/user.png" style="float:right; margin-right:15px; width: 40; height: 40; border-radius: 50%;"></div>
+              <div class="card-footer d-flex">
+                Get Started
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+         <!-- <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-dark h-100">
+              <div class="card-body py-5">Warning Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-success text-white h-100">
+              <div class="card-body py-5">Success Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-danger text-white h-100">
+              <div class="card-body py-5">Danger Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>-->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-table me-2"></i></span>
+                My Classes
+              </div>
+              <div class="card-body">
+                <canvas class="table-responsive" width="400" height="200"></canvas>
+                <table
+                id="example"
+                class="table table-striped data-table">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Classes</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>English</td>
+                    <td>4</td>
+                    <td>Friday</td>
+                    <td>9:30-1:00</td>
+                  </tr>
+                  <tr>
+                    <td>DBMS</td>
+                    <td>5</td>
+                    <td>Monday</td>
+                    <td>10:00-3:00</td>
+                  </tr>
+                  <tr>
+                    <td>DSA</td>
+                    <td>3</td>
+                    <td>Thursday</td>
+                    <td>11:00-2:00</td>
+                  </tr>
+                  <tr>
+                    <td>MWC</td>
+                    <td>4</td>
+                    <td>Tuesday</td>
+                    <td>12:00-4:00</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Classes</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                  </tr>
+                </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span> Teacher's Feedback
+              </div>
+              <div class="card-body">
+                <canvas class="table-responsive" width="400" height="200"></canvas>
+                  <table
+                    id="example"
+                    class="table table-striped data-table" >
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Feedback</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Tiger Nixon</td>
+                        <td>Good</td>
+                      </tr>
+                      <tr>
+                        <td>Ashton Cox</td>
+                        <td>Excellent</td>
+                      </tr>
+                      <tr>
+                        <td>Thor Walton</td>
+                        <td>Very Good</td>
+                    </tbody>
+         
+                       <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Feedback</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+              </div> 
+            </div>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Lesson Result
+              </div>
+              <div class="card-body">
+                <canvas class="chart" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        
+        
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Attendance Chart
+              </div>
+              <div class="card-body">
+                <canvas class="chart1" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+
+          <button>
+            <p>JOIN NOW</p>
+          </button>
+        </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
