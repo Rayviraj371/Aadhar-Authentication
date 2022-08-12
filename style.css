@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+  --blue: #0d6efd;
+  --sky: #0a58ca;
+  --red: #dc3545;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width); 
+}
+
+.offcanvas-body {
+  background: var(--blue);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.bi-bell-fill{
+  color: var(--red);
+}
+.card-footer {
+background: var(--sky);
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+.card-header{
+  background: var(--blue);
+  color: azure;
+}
+.active:hover{
+  background-color: var(--sky);
+}
+#intro{
+  width: 100%;
+}
+div.dataTables_wrapper div.dataTables_filter label {
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+  margin-left: -53px;
+}
+.table-responsive{
+  display: none;
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.text-center
+{
+  padding: 10px;
+  padding-bottom: 20px;
+}
+button
+{
+background: var(--blue);
+padding-top: 20px;
+font-size: 22px;
+border-radius: 10px;
+box-shadow: 0 6px 20px -5px rgba(0,0,0,0);
+}
